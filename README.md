@@ -17,7 +17,7 @@ yarn add styled-components twin.macro
 
 yarn add --dev @types/styled-components
 
-yarn add react-burguer-menu
+yarn add react-burger-menu
 
 yarn add react-responsive @types/react-responsive
 
