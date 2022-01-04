@@ -10,6 +10,15 @@ Precisei alterar no package.json o react-script v5 para:
 "react-scripts": "4.0.3",
 ```
 
+1. Instale
+
 ```bash
 yarn add styled-components twin.macro
+
+yarn add --dev @types/styled-components
+
+yarn add react-burguer-menu
+
+yarn add react-responsive @types/react-responsive
+
 ```
