@@ -6,10 +6,10 @@ import { SCREENS } from "../responsive";
 import menuStyles from "./menuStyles";
 
 const ListContainer = styled.ul`
-  ${tw` 
+  ${tw`
     flex
     list-none
-  `}
+  `};
 `;
 
 const NavItem = styled.li<{ menu?: any }>`
@@ -22,11 +22,10 @@ const NavItem = styled.li<{ menu?: any }>`
     md:mr-5
     cursor-pointer
     transition
-    duration-200
+    duration-300
     ease-in-out
     hover:text-gray-700
-  `}
-
+  `};
   ${({ menu }) =>
     menu &&
     css`
@@ -38,10 +37,11 @@ const NavItem = styled.li<{ menu?: any }>`
     `};
     `};
 `;
+
 export function NavItems() {
   const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
 
-  if (isMobile) {
+  if (isMobile)
     return (
       <Menu right styles={menuStyles}>
         <ListContainer>
@@ -49,7 +49,7 @@ export function NavItems() {
             <a href="#">Home</a>
           </NavItem>
           <NavItem menu>
-            <a href="#">Car</a>
+            <a href="#">Cars</a>
           </NavItem>
           <NavItem menu>
             <a href="#">Services</a>
@@ -60,14 +60,14 @@ export function NavItems() {
         </ListContainer>
       </Menu>
     );
-  }
+
   return (
     <ListContainer>
       <NavItem>
         <a href="#">Home</a>
       </NavItem>
       <NavItem>
-        <a href="#">Car</a>
+        <a href="#">Cars</a>
       </NavItem>
       <NavItem>
         <a href="#">Services</a>
