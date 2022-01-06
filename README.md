@@ -12,9 +12,7 @@
 npx create-react-app react-cars-app --template redux-typescript
 ```
 
-2. Instalação TailwindCSS
-
-Instale a versão 2.2.19
+2. Instalação TailwindCSS - Instale a versão 2.2.19
 
 ```bash
 https://v2.tailwindcss.com/docs/guides/create-react-app
