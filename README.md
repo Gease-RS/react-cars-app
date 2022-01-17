@@ -61,3 +61,11 @@ yarn add react-calendar
 yarn add -D @types/react-calendar
 
 ```
+
+8. Instale o pacote Carousel
+
+```bash
+yarn add @brainhubeu/react-carousel
+
+yarn add @types/brainhubeu__react-carousel -D
+```
