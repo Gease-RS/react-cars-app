@@ -1,15 +1,17 @@
+import { faEnvelope, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import tw from "twin.macro";
 import { Logo } from "../logo";
 
 const FooterContainer = styled.footer`
-  min-height: 30em;
+  //min-height: 24em;
   background-color: #1d2124;
   ${tw`
     flex
     min-w-full
-    pt-4
-    md:pt-12
+    pt-10
+    md:pt-16
     pb-1
     items-center
     justify-center
@@ -19,19 +21,25 @@ const FooterContainer = styled.footer`
 const InnerContainer = styled.div`
   ${tw`
     flex
+    justify-center
     w-full
     h-full
     max-w-screen-2xl
+    flex-wrap
  `};
 `;
 
-const Aboutcontainer = styled.div`
+const AboutContainer = styled.div`
   ${tw`
     flex
     flex-col
     mr-2
-    md:mr-12
-  `}
+    md:mr-16
+     pl-10
+    pr-10
+    md:pl-3
+    md:pr-3
+  `};
 `;
 
 const AboutText = styled.p`
@@ -47,11 +55,14 @@ const AboutText = styled.p`
 
 const SectionContainer = styled.div`
   ${tw`
+    min-w-full
+    md:w-auto
     flex
     flex-col
     mr-2
-    md:mr-12
-
+    md:mr-16
+    pl-10
+    pr-10
   `};
 `;
 
@@ -68,10 +79,13 @@ const ListItem = styled.li`
   ${tw`
     mb-3
   `}
+
   & > a {
     ${tw`
       text-sm
       text-white
+      transition-all
+      hover:text-gray-200
     `}
   }
 `;
@@ -85,17 +99,46 @@ const HeaderTitle = styled.h3`
   `}
 `;
 
+const HorizontalContainer = styled.div`
+  ${tw`
+    flex
+    items-center
+  `}
+`;
+
+const RedIcon = styled.span`
+  ${tw`
+    w-9
+    h-9
+    rounded-full
+    bg-red-500
+    flex
+    items-center
+    justify-center
+    text-white
+    text-base
+    mr-2
+  `}
+`;
+
+const SmallText = styled.h6`
+  ${tw`
+    text-sm
+    text-white
+  `}
+`;
+
 export function Footer() {
   return (
     <FooterContainer>
       <InnerContainer>
-        <Aboutcontainer>
+        <AboutContainer>
           <Logo color="white" bgColor="dark" />
           <AboutText>
             Youcar is Car renting and selling company located in many countries
             across the world which has high quality cars and top rated service.
           </AboutText>
-        </Aboutcontainer>
+        </AboutContainer>
         <SectionContainer>
           <HeaderTitle>About</HeaderTitle>
           <LinksList>
@@ -132,9 +175,27 @@ export function Footer() {
               <a href="#">Privacy Policy</a>
             </ListItem>
             <ListItem>
-              <a href="#">Terms & Contitions</a>
+              <a href="#">Terms &amp; Contitions</a>
             </ListItem>
           </LinksList>
+        </SectionContainer>
+        <SectionContainer>
+          <HeaderTitle>Call Now</HeaderTitle>
+          <HorizontalContainer>
+            <RedIcon>
+              <FontAwesomeIcon icon={faPhoneAlt} />
+            </RedIcon>
+            <SmallText>+91 555-234-8469</SmallText>
+          </HorizontalContainer>
+        </SectionContainer>
+        <SectionContainer>
+          <HeaderTitle>Mail</HeaderTitle>
+          <HorizontalContainer>
+            <RedIcon>
+              <FontAwesomeIcon icon={faEnvelope} />
+            </RedIcon>
+            <SmallText>info@youcar.com</SmallText>
+          </HorizontalContainer>
         </SectionContainer>
       </InnerContainer>
     </FooterContainer>
