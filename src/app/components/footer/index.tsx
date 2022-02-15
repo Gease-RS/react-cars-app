@@ -9,10 +9,10 @@ const FooterContainer = styled.footer`
   background-color: #1d2124;
   ${tw`
     flex
+    flex-col
     min-w-full
     pt-10
     md:pt-16
-    pb-1
     items-center
     justify-center
   `};
@@ -21,12 +21,31 @@ const FooterContainer = styled.footer`
 const InnerContainer = styled.div`
   ${tw`
     flex
-    justify-center
     w-full
     h-full
     max-w-screen-2xl
     flex-wrap
  `};
+`;
+
+const BottomContainer = styled.div`
+  ${tw`
+    flex
+    w-full
+    max-w-screen-2xl
+    justify-center
+    md:justify-start
+    mt-7
+    pl-10
+    md:pl-3
+  `}
+`;
+
+const CopyrightText = styled.small`
+  font-size: 12px;
+  ${tw`
+    text-gray-300
+  `}
 `;
 
 const AboutContainer = styled.div`
@@ -35,7 +54,7 @@ const AboutContainer = styled.div`
     flex-col
     mr-2
     md:mr-16
-     pl-10
+    pl-10
     pr-10
     md:pl-3
     md:pr-3
@@ -55,7 +74,7 @@ const AboutText = styled.p`
 
 const SectionContainer = styled.div`
   ${tw`
-    min-w-full
+    w-full
     md:w-auto
     flex
     flex-col
@@ -63,6 +82,10 @@ const SectionContainer = styled.div`
     md:mr-16
     pl-10
     pr-10
+    md:pl-3
+    md:pr-3
+    mt-7
+    md:mt-0
   `};
 `;
 
@@ -198,6 +221,12 @@ export function Footer() {
           </HorizontalContainer>
         </SectionContainer>
       </InnerContainer>
+      <BottomContainer>
+        <CopyrightText>
+          Copyright &copy; {new Date().getFullYear()} Youcar. All rights
+          reserved.
+        </CopyrightText>
+      </BottomContainer>
     </FooterContainer>
   );
 }

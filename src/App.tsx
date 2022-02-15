@@ -4,10 +4,11 @@ import tw from "twin.macro";
 import { HomePage } from "./app/containers/HomePage/Index";
 
 const AppContainer = styled.div`
-  ${tw`flex 
-      flex-col 
+  ${tw`
       w-full
       h-full
+      flex 
+      flex-col 
   `}
 `;
 
