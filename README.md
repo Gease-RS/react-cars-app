@@ -69,3 +69,17 @@ yarn add @brainhubeu/react-carousel
 
 yarn add @types/brainhubeu__react-carousel -D
 ```
+
+9. Apollo
+
+```bash
+# Implementando Apollo Client
+$ yarn add @apollo/client graphql
+```
+
+10. Script schema:download
+
+Se Tiver problema para executar o script, instale global o grapqhl e o apollo
+
+Package.json
+"schema:download": "npx apollo service:download --endpoint=http://localhost:9000/graphql ./src/app/graphql-schema.json",
