@@ -77,6 +77,14 @@ yarn add @types/brainhubeu__react-carousel -D
 $ yarn add @apollo/client graphql
 ```
 
+10. Redux-logger
+
+```bash
+# Instalando
+$ yarn add redux-logger
+$ yarn add -D @types/redux-logger
+```
+
 10. Script schema:download
 
 Se Tiver problema para executar o script, instale global o grapqhl e o apollo
